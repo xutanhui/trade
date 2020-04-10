@@ -1,2 +1,81 @@
-hello:
-  text: hello spring dev
+server:
+  port: 8763
+
+spring:
+  application:
+    name: tradeCal
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_book?useSSL=false&characterEncoding=utf8
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+
+  redis:
+    database: 0
+    host: 192.168.86.4
+    port: 6379
+    password:
+    timeout: 20000
+      #cluster:
+      #nodes: 192.168.211.134:7000,192.168.211.134:7001
+      #-
+    #max-redirects:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+  #rabbitMQ配置
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: root
+    password: root
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+#pagehelper分页插件配置
+pagehelper:
+  helperDialect : mysql
+  reasonable : true
+  supportMethodsArguments : true
+  params : count=countSql
+
+#mybatis:
+#  type-aliases-package= : com.xth.entity
+#  mapperLocations : classpath:com.xth.mappers/*:xml
+
+#配合@EnableConfigurationProperties(value = Person.class)
+#和@ConfigurationProperties(prefix = "person")使用
+person:
+  name:
+  age:
+  pets: [cat,dog,duck,tiggr]
+  cars:
+    - dazhao
+    - audi
+    - jieda
+  maps: {k1: v1,k2: v2}
+  girlfriend:
+    name: xxx
+    age: 20
+
+management:
+  server:
+    port: 9001
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: *
+    health:
+      show-details=always: always
+
+#测试的开关值
+flag: Y
