@@ -17,17 +17,12 @@ spring:
     port: 6379
     password:
     timeout: 20000
-      #cluster:
-      #nodes: 192.168.211.134:7000,192.168.211.134:7001
-      #-
-    #max-redirects:
     jedis:
       pool:
         max-active: 8
         max-wait: -1
         max-idle: 8
         min-idle: 0
-  #rabbitMQ配置
   rabbitmq:
     host: 127.0.0.1
     port: 5672
@@ -39,20 +34,12 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
-
-#pagehelper分页插件配置
 pagehelper:
   helperDialect : mysql
   reasonable : true
   supportMethodsArguments : true
   params : count=countSql
-
-#mybatis:
-#  type-aliases-package= : com.xth.entity
-#  mapperLocations : classpath:com.xth.mappers/*:xml
-
-#配合@EnableConfigurationProperties(value = Person.class)
-#和@ConfigurationProperties(prefix = "person")使用
+  
 person:
   name:
   age:
@@ -76,6 +63,4 @@ management:
         include: *
     health:
       show-details=always: always
-
-#测试的开关值
 flag: N
