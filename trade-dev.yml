@@ -78,4 +78,4 @@ management:
       show-details=always: always
 
 #测试的开关值
-flag: Y
+flag: N
