@@ -5,7 +5,7 @@ spring:
     active: dev
   application:
     name: trade-dev          			
-------------------------
+
 server:
   port: 8763
 spring:
