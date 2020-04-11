@@ -1,18 +1,17 @@
-    
 spring:
   profiles:
-    active: dev
------------------------
+    active: test
+----
 spring:
-  profiles: dev
+  profiles: test
   application:
-    name: trade-dev          			
+    name: trade-test          			
 server:
   port: 8763
------------------------
+----
 spring:
-  profiles: pro
+  profiles: prod
   application:
-    name: trade-pro       			                      
+    name: trade-prod       			                      
 server:
   port: 8773
