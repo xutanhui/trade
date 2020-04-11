@@ -1,0 +1,25 @@
+server:
+  port: 8763
+spring:
+  profiles:
+    active: dev
+  application:
+    name: trade-dev          			
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_book?useSSL=false&characterEncoding=utf8
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+------------------------
+server:
+  port: 8763
+spring:
+  profiles:
+    active: pro
+  application:
+    name: trade-pro       			                      
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_book?useSSL=false&characterEncoding=utf8
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
