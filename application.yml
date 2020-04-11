@@ -1,14 +1,12 @@
 spring:
   profiles:
     active: test
-----
 spring:
   profile: test
   application:
     name: trade-test          			
 server:
   port: 8763
-----
 spring:
   profile: prod
   application:
