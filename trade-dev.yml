@@ -1,8 +1,57 @@
 server:
   port: 8763
-
 spring:
   application:
-    name: tradeCal
-    
-flag: N
+    name: trade
+  cloud:
+    config:
+      uri: http://localhost:8770/
+      profile: dev                                      
+      label: master
+      discovery:
+        enabled: true
+        service-id: configService
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_book?useSSL=false&characterEncoding=utf8
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    database: 0
+    host: 192.168.86.4
+    port: 6379
+    password:
+    timeout: 20000
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: dev
+    password: guest
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+pagehelper:
+  helperDialect : mysql
+  reasonable : true
+  supportMethodsArguments : true
+  params : count=countSql
+person:
+  name:
+  age:
+  pets: [cat,dog,duck,tiggr]
+  cars:
+    - dazhao
+    - audi
+    - jieda
+  maps: {k1: v1,k2: v2}
+  girlfriend:
+    name: xxx
+    age: 20
+Flag: Y
