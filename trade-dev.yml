@@ -51,7 +51,7 @@ person:
   girlfriend:
     name: xxx
     age: 20
-Flag: Y
+Flag: YYY
 ---
 server:
   port: 8763
