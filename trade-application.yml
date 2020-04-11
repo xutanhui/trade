@@ -2,16 +2,16 @@ spring:
   profiles:
     active: dev
 -----------------------
-server:
-  port: 8763
 spring:
   profiles: dev
   application:
     name: trade-dev          			
-
 server:
-  port: 8773
+  port: 8763
+-----------------------
 spring:
   profiles: pro
   application:
     name: trade-pro       			                      
+server:
+  port: 8773
